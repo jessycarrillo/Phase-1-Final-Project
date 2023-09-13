@@ -20,3 +20,17 @@ Here's an overview of the key features and components of the code:
 This application provides a user-friendly interface for exploring breweries in different cities and keeping track of favorite breweries. It leverages client-server communication to retrieve and store data, making it a practical tool for beer enthusiasts seeking to discover new and interesting breweries in their preferred locations.
 
 The brewery data comes from: https://www.openbrewerydb.org/  
+
+# Setting up
+
+The data comes from https://www.openbrewerydb.org/, but I'm using a Json server to have my data local. You need to install JSON Server globally on your machine:
+
+```
+$ npm install -g json-server
+```
+
+Then start the server using:
+
+```
+$ json-server --watch db.json
+```
