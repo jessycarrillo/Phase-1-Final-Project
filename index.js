@@ -69,22 +69,24 @@ function favoritesList(data) {
 }
 function handleFavoriteBrewery(brewery) {
     const h3Text = "Favorite breweries";
-    const favoriteBrewery = document.getElementById("favorites-list");
-    const existingH3 = favoriteBrewery.querySelector("h3");
+    const favoriteBreweryHeader = document.getElementById("Favorites-container");
+    const existingH3 = favoriteBreweryHeader.querySelector("h3");
     if (!existingH3 || existingH3.textContent !== h3Text) {
         const h3 = document.createElement("h3");
         h3.textContent = h3Text;
-        favoriteBrewery.appendChild(h3);
+        favoriteBreweryHeader.appendChild(h3);
     }
-    const breweryName = document.createElement("li");
-    breweryName.textContent = brewery.name;
-    favoriteBrewery.appendChild(breweryName);
+    const breweryList = document.getElementById("favorites-list");
+    const listItem = document.createElement("li");
+          listItem.textContent = brewery.name;
+    
     const deleteButton = document.createElement("button");
-        deleteButton.textContent = " x ";
-        deleteButton.addEventListener("click", () => {
-            //DON'T FORGET add function here that handle delete;
-        });
-        favoriteBrewery.appendChild(deleteButton);
+    deleteButton.textContent = " x ";
+    deleteButton.addEventListener("click", () => {
+        //DON'T FORGET add function here that handle delete;
+    });
+    listItem.appendChild(deleteButton);
+    breweryList.appendChild(listItem);
     
 
 }
