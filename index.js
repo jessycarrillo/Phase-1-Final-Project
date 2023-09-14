@@ -29,10 +29,18 @@ function handleBreweries(breweryData) {
         const breweryCity = document.createElement("li");
         breweryCity.textContent = brewery.city; 
         breweryList.appendChild(breweryCity);
-        
+
         const breweryState = document.createElement("li");
         breweryState.textContent = brewery.state_province; 
         breweryList.appendChild(breweryState);
+
+        const breweryZipCode = document.createElement("li");
+        breweryZipCode.textContent = brewery.postal_code; 
+        breweryList.appendChild(breweryZipCode);
+
+        const breweryType = document.createElement("li");
+        breweryType.textContent = `This is a ${brewery.brewery_type} brewery`; 
+        breweryList.appendChild(breweryType);
 
     });
 }
