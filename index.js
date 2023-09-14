@@ -13,5 +13,13 @@ function searchBreweriesbyCity(userInput) {
     .catch(error => {
         alert("Error fetching data:", error); 
     });
-
+}
+function handleBreweries(breweryData) {
+    const breweryList = document.getElementById("breweries-list");
+    breweryList.innerHTML = "";
+    breweryData.forEach(brewery => {
+        const breweryName = document.createElement("h3");
+        breweryName.textContent = brewery.name; 
+        breweryList.appendChild(breweryName);
+    });
 }
