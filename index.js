@@ -53,7 +53,22 @@ function handleBreweries(breweryData) {
     });
 }
 
+function favoritesList(data) {
+    console.log(data)
+    const config = {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({"name": data.name})
+    };
 
+    fetch("http://localhost:3000/favorites_Breweries", config)
+    .then(response => response.json()) 
+    .then(json => handleFavoriteBrewery(json));
+   
+    
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("TapTracker-form").addEventListener("submit", (e) => {
