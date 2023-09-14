@@ -42,8 +42,18 @@ function handleBreweries(breweryData) {
         breweryType.textContent = `This is a ${brewery.brewery_type} brewery`; 
         breweryList.appendChild(breweryType);
 
+        const favButton = document.createElement("button");
+        favButton.textContent = "Add to your breweries";
+        favButton.addEventListener("click", () => {
+                favoritesList(brewery);
+                
+        });
+
+        breweryList.appendChild(favButton);
     });
 }
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("TapTracker-form").addEventListener("submit", (e) => {
