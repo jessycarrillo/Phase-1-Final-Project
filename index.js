@@ -68,15 +68,20 @@ function favoritesList(data) {
     .then(json => handleFavoriteBrewery(json));
 }
 function handleFavoriteBrewery(brewery) {
+    const h3Text = "Favorite breweries";
     const favoriteBrewery = document.getElementById("favorites-list");
-    const h3 = document.createElement ("h3")
-    h3.textContent = "Favorite breweries"
+    const existingH3 = favoriteBrewery.querySelector("h3");
+    if (!existingH3 || existingH3.textContent !== h3Text) {
+        const h3 = document.createElement("h3");
+        h3.textContent = h3Text;
+        favoriteBrewery.appendChild(h3);
+    }
+    
     const breweryName = document.createElement("li");
     breweryName.textContent = brewery.name;
-    favoriteBrewery.appendChild(h3); 
-    favoriteBrewery.appendChild(breweryName); 
-    
-}  
+    favoriteBrewery.appendChild(breweryName);
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("TapTracker-form").addEventListener("submit", (e) => {
