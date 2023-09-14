@@ -21,5 +21,10 @@ function handleBreweries(breweryData) {
         const breweryName = document.createElement("h3");
         breweryName.textContent = brewery.name; 
         breweryList.appendChild(breweryName);
+
+        const breweryStreet = document.createElement("li");
+        breweryStreet.textContent = brewery.street; 
+        breweryList.appendChild(breweryStreet);
+        
     });
 }
