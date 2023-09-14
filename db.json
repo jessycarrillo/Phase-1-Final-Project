@@ -1802,5 +1802,37 @@
     }
   ],
   "favorites_Breweries": [
-    ]
+    {
+      "name": "Alewife Brewing Company",
+      "id": 1
+    },
+    {
+      "name": "Big Alice Brewing Company",
+      "id": 2
+    },
+    {
+      "name": "Alewife Brewing Company",
+      "id": 3
+    },
+    {
+      "name": "Big Alice Brewing Company",
+      "id": 4
+    },
+    {
+      "name": "Alewife Brewing Company",
+      "id": 5
+    },
+    {
+      "name": "Big Alice Brewing Company",
+      "id": 6
+    },
+    {
+      "name": "Alewife Brewing Company",
+      "id": 7
+    },
+    {
+      "name": "Big Alice Brewing Company",
+      "id": 8
+    }
+  ]
 }
