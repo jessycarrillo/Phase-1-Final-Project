@@ -13,13 +13,11 @@ Here's an overview of the key features and components of the code:
 
 5. **Favorites List**: Users have the option to add breweries to their list of favorites. Each brewery listing includes an "Add to your breweries" button that, when clicked, sends a POST request to a different endpoint on the server to store the favorite brewery data.
 
-6. **Event Listeners**: The code uses event listeners to respond to user interactions, such as submitting the search form or clicking the "Add to your breweries" button.
+6. **Event Listeners**: The code uses event listeners to respond to user interactions, such as submitting the search form or clicking the "Add to your breweries" button and DOM Content Loaded.
 
 7. **DOM Manipulation**: The code dynamically updates the DOM (Document Object Model) to display brewery data and manage the favorites list.
 
 This application provides a user-friendly interface for exploring breweries in different cities and keeping track of favorite breweries. It leverages client-server communication to retrieve and store data, making it a practical tool for beer enthusiasts seeking to discover new and interesting breweries in their preferred locations.
-
-The brewery data comes from: https://www.openbrewerydb.org/  
 
 # Setting up
 
@@ -34,3 +32,9 @@ Then start the server using:
 ```
 $ json-server --watch db.json
 ```
+
+# Sources and resources
+
+**The brewery data comes from:** https://www.openbrewerydb.org/ 
+
+**Added the operator _like to the URL to search case unsensitive and with cities that contains:** https://github.com/typicode/json-server/issues/530
