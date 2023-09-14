@@ -66,9 +66,13 @@ function favoritesList(data) {
     fetch("http://localhost:3000/favorites_Breweries", config)
     .then(response => response.json()) 
     .then(json => handleFavoriteBrewery(json));
-   
-    
 }
+function handleFavoriteBrewery(brewery) {
+    const favoriteBrewery = document.getElementById("favorites-list");
+    const breweryName = document.createElement("li");
+    breweryName.textContent = brewery.name;
+    favoriteBrewery.appendChild(breweryName); 
+}  
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("TapTracker-form").addEventListener("submit", (e) => {
