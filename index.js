@@ -69,9 +69,13 @@ function favoritesList(data) {
 }
 function handleFavoriteBrewery(brewery) {
     const favoriteBrewery = document.getElementById("favorites-list");
+    const h3 = document.createElement ("h3")
+    h3.textContent = "Favorite breweries"
     const breweryName = document.createElement("li");
     breweryName.textContent = brewery.name;
+    favoriteBrewery.appendChild(h3); 
     favoriteBrewery.appendChild(breweryName); 
+    
 }  
 
 document.addEventListener("DOMContentLoaded", () => {
