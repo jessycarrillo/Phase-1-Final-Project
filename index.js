@@ -30,10 +30,15 @@ function handleBreweries(breweryData) {
         breweryCity.textContent = brewery.city; 
         breweryList.appendChild(breweryCity);
 
-        const breweryState = document.createElement("li");
-        breweryState.textContent = brewery.state_province; 
-        breweryList.appendChild(breweryState);
-
-        
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("TapTracker-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const userInput = document.getElementById("search").value;
+        searchBreweriesbyCity(userInput);
+       
+        
+    });
+});
