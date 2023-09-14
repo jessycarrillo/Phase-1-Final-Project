@@ -29,5 +29,11 @@ function handleBreweries(breweryData) {
         const breweryCity = document.createElement("li");
         breweryCity.textContent = brewery.city; 
         breweryList.appendChild(breweryCity);
+
+        const breweryState = document.createElement("li");
+        breweryState.textContent = brewery.state_province; 
+        breweryList.appendChild(breweryState);
+
+        
     });
 }
