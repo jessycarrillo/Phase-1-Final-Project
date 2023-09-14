@@ -76,12 +76,18 @@ function handleFavoriteBrewery(brewery) {
         h3.textContent = h3Text;
         favoriteBrewery.appendChild(h3);
     }
-    
     const breweryName = document.createElement("li");
     breweryName.textContent = brewery.name;
     favoriteBrewery.appendChild(breweryName);
-}
+    const deleteButton = document.createElement("button");
+        deleteButton.textContent = " x ";
+        deleteButton.addEventListener("click", () => {
+            //DON'T FORGET add function here that handle delete;
+        });
+        favoriteBrewery.appendChild(deleteButton);
+    
 
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("TapTracker-form").addEventListener("submit", (e) => {
