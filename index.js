@@ -26,5 +26,8 @@ function handleBreweries(breweryData) {
         breweryStreet.textContent = brewery.street; 
         breweryList.appendChild(breweryStreet);
         
+        const breweryCity = document.createElement("li");
+        breweryCity.textContent = brewery.city; 
+        breweryList.appendChild(breweryCity);
     });
 }
